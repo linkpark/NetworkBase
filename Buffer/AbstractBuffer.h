@@ -20,7 +20,20 @@
 
 class AbstractBuffer{
 public:
-    virtual int capacity() = 0;
+    /* *
+     * allocate the space of the buffer
+     * 
+     * @param size [in]
+     *
+     * @return error code
+     */
+    virtual int allocate( size_t size ) = 0;
+
+    /* *
+     * get and set funtion of the four attribute
+     */
+    virtual int getCapacity()const = 0;
+    virtual int resize( int &size ) = 0;
 
     virtual int getPosition()const = 0;
     virtual int setPosition( int &newPosition ) = 0;
@@ -35,6 +48,8 @@ public:
     
     virtual bool hasRemaining() = 0;
     virtual bool isReadOnly() = 0;
+
+    virtual int freeBuffer() = 0;
 
 protected:
     /*A buffer should cantain this four attribute,
