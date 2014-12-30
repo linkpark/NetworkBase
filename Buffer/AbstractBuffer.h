@@ -18,6 +18,8 @@
 #ifndef ABSTRACTBUFFER_H_
 #define ABSTRACTBUFFER_H_
 
+#include <sys/types.h>
+
 class AbstractBuffer{
 public:
     /* *
