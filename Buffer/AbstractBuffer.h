@@ -22,6 +22,12 @@
 
 class AbstractBuffer{
 public:
+    AbstractBuffer():m_Mark(-1),m_Limit(-1),
+        m_Capacity(-1),m_Position(-1){ }
+
+    virtual ~AbstractBuffer(){ }
+
+public:
     /* *
      * allocate the space of the buffer
      * 
@@ -56,10 +62,10 @@ public:
 protected:
     /*A buffer should cantain this four attribute,
      * to provide the data message*/
-    int m_iCapacity;
-    int m_iLimit;
-    int m_iPosition;
-    int m_iMark;
+    int m_Capacity;
+    int m_Limit;
+    int m_Position;
+    int m_Mark;
 };
 
 #endif
