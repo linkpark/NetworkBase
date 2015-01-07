@@ -41,7 +41,6 @@ public:
      * get and set funtion of the four attribute
      */
     virtual int getCapacity()const = 0;
-    virtual int resize( int &size ) = 0;
 
     virtual int getPosition()const = 0;
     virtual int setPosition( int &newPosition ) = 0;
@@ -49,13 +48,10 @@ public:
     virtual int getLimit()const = 0;
     virtual int setLimit( int &newLimit ) = 0;
 
-    virtual int reset() = 0;
     virtual int clear() = 0;
     virtual int flip() = 0;
-    virtual int rewind() = 0;
     
     virtual bool hasRemaining() = 0;
-    virtual bool isReadOnly() = 0;
 
     virtual int freeBuffer() = 0;
 

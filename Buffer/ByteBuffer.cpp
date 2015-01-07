@@ -29,3 +29,37 @@ int ByteBuffer::allocate( size_t size ){
     
     return SUCCESSFUL;
 }
+
+int ByteBuffer::getCapacity()const{
+    return m_Capacity;
+}
+
+int ByteBuffer::getPosition()const{
+    return m_Position;
+}
+
+int ByteBuffer::setPosition( int &newPosition ){
+    if( newPosition > m_Limit ) {
+        return PARAM_ERROR;
+    }
+    
+    m_Position = newPosition;
+
+    return SUCCESSFUL;
+}
+
+int ByteBuffer::getLimit()const{
+    return m_Limit;
+}
+
+int ByteBuffer::setLimit( int &newLimit){
+    if( newLimit > m_Capacity ) {
+        return PARAM_ERROR;
+    }
+
+    m_Limit = newLimit;
+
+    return SUCCESSFUL;
+}
+
+

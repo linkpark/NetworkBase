@@ -39,7 +39,6 @@ public:
      * get and set funtion of the four attribute
      */
     virtual int getCapacity()const;
-    virtual int resize( int &size );
 
     virtual int getPosition()const;
     virtual int setPosition( int &newPosition );
@@ -56,6 +55,12 @@ public:
     virtual bool isReadOnly();
 
     virtual int freeBuffer();
+
+public:
+    int get( char &a );
+
+    int set( char a );
+    int set( char *buf, int size );
 
 private:
     char *m_pBuffer;
